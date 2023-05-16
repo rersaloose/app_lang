@@ -1,3 +1,5 @@
+import 'package:app_lang/screens/PhrasesPage.dart';
+import 'package:app_lang/screens/family_members.dart';
 import 'package:app_lang/screens/numbers_page.dart';
 import 'package:flutter/material.dart';
 
@@ -31,8 +33,14 @@ class _HomeScreenState extends State<HomeScreen> {
           },
         ),
         Category(
-          color: const Color(0xffF5D7D8),
+          color: const Color(0xffF534D8),
           text: 'Family Numbers',
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (BuildContext context) {
+              return family_Members();
+            }));
+          },
         ),
         Category(
           color: const Color(0xff6DA5C0),
@@ -41,6 +49,12 @@ class _HomeScreenState extends State<HomeScreen> {
         Category(
           color: const Color(0xff854F6C),
           text: 'Phrases',
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (BuildContext context) {
+              return PhrasesPage();
+            }));
+          },
         )
       ]),
     );

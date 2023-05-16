@@ -1,39 +1,45 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
+import '../models/Phrases.dart';
 import '../models/number.dart';
 
 class Item_Number extends StatelessWidget {
   const Item_Number({
     super.key,
-    required this.number,
+    required this.item,
+    required this.color,
+    required this.type,
   });
-  final Number number;
-
+  final Item item;
+  final color;
+  final String type;
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFFF05107),
+      color: color,
       height: 100,
       child: Row(
         children: [
           Container(
             color: Colors.white,
             child: Image.asset(
-              number.image,
+              item.image,
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  number.japn,
-                  style: TextStyle(color: Colors.white),
+                  item.japn,
+                  style: const TextStyle(color: Colors.white),
                 ),
                 Text(
-                  number.eng,
-                  style: TextStyle(color: Colors.white),
+                  item.eng,
+                  style: const TextStyle(color: Colors.white),
                 ),
               ],
             ),
@@ -44,8 +50,8 @@ class Item_Number extends StatelessWidget {
           IconButton(
             onPressed: () {
               final player = AudioPlayer();
-//
-              player.play(UrlSource('number_one_sound.mp3'));
+
+              player.play(AssetSource('sounds/$type/${item.sound}'));
             },
             icon: const Icon(
               Icons.play_arrow,
@@ -56,6 +62,60 @@ class Item_Number extends StatelessWidget {
         ],
       ),
     );
-    ;
+  }
+}
+
+class PhrasesItem extends StatelessWidget {
+  const PhrasesItem({
+    super.key,
+    required this.item,
+    required this.color,
+    required this.type,
+  });
+  final Phrases item;
+  final color;
+  final String type;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: color,
+      height: 100,
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 15),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  item.japn,
+                  style: const TextStyle(color: Colors.white),
+                ),
+                Text(
+                  item.eng,
+                  style: const TextStyle(color: Colors.white),
+                ),
+              ],
+            ),
+          ),
+          const Spacer(
+            flex: 1,
+          ),
+          IconButton(
+            onPressed: () {
+              final player = AudioPlayer();
+
+              player.play(AssetSource('sounds/$type/${item.sound}'));
+            },
+            icon: const Icon(
+              Icons.play_arrow,
+              color: Colors.white,
+              size: 30,
+            ),
+          )
+        ],
+      ),
+    );
   }
 }

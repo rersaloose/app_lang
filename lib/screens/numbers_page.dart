@@ -12,68 +12,68 @@ class Numbers_page extends StatefulWidget {
 
 // ignore: camel_case_types
 class _Numbers_pageState extends State<Numbers_page> {
-  final List<Number> numbers = const [
-    Number(
+  final List<Item> numbers = const [
+    Item(
         sound: 'number_six_sound.mp3',
         image: 'assets/images/numbers/number_one.png',
         eng: 'one ',
         japn: 'ichi '),
-    Number(
+    Item(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_two.png',
         eng: 'tow ',
         japn: 'ichi '),
-    Number(
+    Item(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_three.png',
         eng: 'three ',
         japn: 'ichi '),
-    Number(
+    Item(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_four.png',
         eng: 'four ',
         japn: 'ichi '),
-    Number(
+    Item(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_five.png',
         eng: 'five ',
         japn: 'ichi '),
-    Number(
+    Item(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_six.png',
         eng: 'six ',
         japn: 'ichi '),
-    Number(
+    Item(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_seven.png',
         eng: 'seven ',
         japn: 'ichi '),
-    Number(
+    Item(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_eight.png',
         eng: 'eight ',
         japn: 'ichi '),
-    Number(
+    Item(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_nine.png',
         eng: 'nine ',
         japn: 'ichi '),
-    Number(
+    Item(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_ten.png',
         eng: 'ten ',
         japn: 'ichi '),
-    Number(
+    Item(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_ten.png',
         eng: 'ten ',
         japn: 'ichi '),
-    Number(
+    Item(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_ten.png',
         eng: 'ten ',
         japn: 'ichi '),
-    Number(
+    Item(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_ten.png',
         eng: 'ten ',
@@ -89,7 +89,11 @@ class _Numbers_pageState extends State<Numbers_page> {
         body: ListView.builder(
             itemCount: numbers.length,
             itemBuilder: (context, index) {
-              return Item_Number(number: numbers[index]);
+              return Item_Number(
+                item: numbers[index],
+                color: const Color(0xffEF9235),
+                type: 'numbers',
+              );
             })
         //  ListView(children: getlist(numbers)),
         );
