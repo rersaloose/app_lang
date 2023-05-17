@@ -10,49 +10,49 @@ class PhrasesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Phrases> phrases = const [
       Phrases(
+        sound: 'are_you_coming.wav',
         eng: 'are_you_coming',
         japn: '',
-        sound: 'are_you_coming.wav',
       ),
       Phrases(
+        sound: 'dont_forget_to_subscribe.wav',
         eng: 'dont_forget_to_subscribe',
         japn: '',
-        sound: 'dont_forget_to_subscribe.wav',
       ),
       Phrases(
+        sound: 'how_are_you_feeling.wav',
         eng: 'how_are_you_feeling',
         japn: '',
-        sound: 'how_are_you_feeling.wav',
       ),
       Phrases(
-        eng: 'i_love_anime',
-        japn: '',
         sound: 'i_love_anime.wav',
+        japn: '',
+        eng: 'i_love_anime',
       ),
       Phrases(
+        sound: 'i_love_programming.wav',
         eng: 'i_love_programming',
         japn: '',
-        sound: 'i_love_programming.wav',
       ),
       Phrases(
+        sound: 'programming_is_easy.wav',
         eng: 'programming_is_easy',
         japn: '',
-        sound: 'programming_is_easy.wav',
       ),
       Phrases(
+        sound: 'what_is_your_name.wav',
         eng: 'what_is_your_name',
         japn: '',
-        sound: 'what_is_your_name.wav',
       ),
       Phrases(
+        sound: 'where_are_you_going.wav',
         eng: 'where_are_you_going',
         japn: '',
-        sound: 'where_are_you_going.wav',
       ),
       Phrases(
+        sound: 'yes_im_coming.wav',
         eng: 'yes_im_coming',
         japn: '',
-        sound: 'yes_im_coming.wav',
       ),
     ];
     return Scaffold(
@@ -68,3 +68,4 @@ class PhrasesPage extends StatelessWidget {
             }));
   }
 }
+//assets\sounds\phrases

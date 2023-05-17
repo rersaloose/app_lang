@@ -73,7 +73,7 @@ class PhrasesItem extends StatelessWidget {
     required this.type,
   });
   final Phrases item;
-  final color;
+  final Color color;
   final String type;
   @override
   Widget build(BuildContext context) {
